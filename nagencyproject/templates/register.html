@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'css/register.css' %}">
+</head>
+<body>
+<form class="form" action="register" method="post">
+    {% csrf_token %}
+    <span class="signup">Sign Up</span>
+    <input type="text" name="username" placeholder="Enter the username" class="form--input">
+    <input type="text" name="first_name" placeholder="Enter the First name" class="form--input">
+    <input type="text" name="last_name" placeholder="Enter the Last name" class="form--input">
+    <input type="email" name="email" placeholder="Enter the email" class="form--input">
+    <input type="password" name="password" placeholder="Enter the password" class="form--input">
+    <input type="password" name="password1" placeholder="Confirm password" class="form--input">
+
+    <button class="form--submit">
+        Sign up
+    </button>
+</form>
+</body>
+</html>

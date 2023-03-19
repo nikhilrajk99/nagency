@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'css/register.css' %}">
+</head>
+<body>
+<form class="form" enctype="multipart/form-data" method="post">
+    {% csrf_token %}
+    <span class="signup">Add Item</span>
+    <input type="text" name="name" placeholder="Enter the name" class="form--input">
+    <input type="text" name="desc" placeholder="Enter the description" class="form--input">
+    <input type="file" name="img" class="form--input">
+    <input type="datetime-local" name="date" class="form--input">
+    <button class="form--submit">
+        Add
+    </button>
+</form>
+</body>
+</html>
